@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="5">
+	<test name="Test">
+		<classes>
+
+			<class
+				name="com.tatcha.TatchaSelWeb.testcases.CreatAnAccountTest" />
+			<class name="com.tatcha.TatchaSelWeb.testcases.LoginTest" />
+
+			<class
+				name="com.tatcha.TatchaSelWeb.testcases.GuestCheckoutInternationalAddressRegisterTest" />
+			<class
+				name="com.tatcha.TatchaSelWeb.testcases.GuestCheckoutUsRegisterTest" />
+			<!-- <class
+				name="com.tatcha.TatchaSelWeb.testcases.GuestCheckoutUsTest" />
+ -->
+			<class
+				name="com.tatcha.TatchaSelWeb.testcases.GuestCheckoutInternationalAddressTest" />
+			<class
+				name="com.tatcha.TatchaSelWeb.testcases.LoginExpressCheckoutDefaultAddressTest" />
+			<!-- <class
+				name="com.tatcha.TatchaSelWeb.testcases.GuestCheckoutPayPalTest" />
+			 -->
+			<class
+				name="com.tatcha.TatchaSelWeb.testcases.ShoppingBagPromoExpressCheckoutTest" />
+			<class
+				name="com.tatcha.TatchaSelWeb.testcases.ShoppingBagSamplesExpressCheckoutTest" />
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
