@@ -3,7 +3,6 @@ package com.tatcha.TatchaSelWeb.pages;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,26 +11,21 @@ import com.tatcha.TatchaSelWeb.base.TestBase;
 
 public class MyShoppingBag extends TestBase {
 
-	
-	WebElement checkoutButton=driver.findElement(By.name("dwfrm_cart_checkoutCart"));
-	WebElement autoDeliverycheckBox=driver.findElement(By.name("dwfrm_smartorderrefill_hasSmartOrderRefill"));
-	WebElement promoTextBox=driver.findElement(By.id("dwfrm_cart_couponCode"));
-	WebElement promoApplyButton=driver.findElement(By.id("add-coupon"));
-	WebElement qtyDropDown=driver.findElement(By.name("dwfrm_cart_shipments_i0_items_i0_quantity"));
 	// GO TO SHIPPING BUTTON CLICK//
 
 	public void goToShipping() {
 
-		checkoutButton.click();
+		driver.findElement(By.name("dwfrm_cart_checkoutCart")).click();
 	}
 
+
 	public void checkboxAd() {
-		autoDeliverycheckBox.click();
+		driver.findElement(By.name("dwfrm_smartorderrefill_hasSmartOrderRefill")).click();
 	}
 
 	public void applypromo() {
-		promoTextBox.sendKeys("WELCOME20");
-		promoApplyButton.click();
+		driver.findElement(By.id("dwfrm_cart_couponCode")).sendKeys("WELCOME20");
+		driver.findElement(By.id("add-coupon")).click();
 
 	}
 
@@ -44,7 +38,7 @@ public class MyShoppingBag extends TestBase {
 
 	public void updateQuantity() {
 
-		Select updateQuantity = new Select(qtyDropDown);
+		Select updateQuantity = new Select(driver.findElement(By.name("dwfrm_cart_shipments_i0_items_i0_quantity")));
 		updateQuantity.selectByVisibleText("5");
 	}
 
